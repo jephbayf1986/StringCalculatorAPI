@@ -1,15 +1,25 @@
 ﻿using StringCalculator.Application.Constants;
+using System;
 using System.Text.RegularExpressions;
 
 namespace StringCalculator.Application.StringHelpers
 {
     public class OperationIdentifier : IOperationIdentifier
     {
-        public MatchCollection GetOperationMatches(string completeString, OperationSymbol symbol)
+        public string GetNextOperationMatch(string completeString, string symbol)
         {
-            Regex regex = new Regex("");
+            string RegexSymbol = symbol.Replace("+", "\\+").Replace("*", "\\*");
 
-            return regex.Matches(completeString);
+            Regex regex = new Regex($"{RegexPattern.AnyPositive}{RegexSymbol}{RegexPattern.AnyPositive}");
+
+            MatchCollection Matches = regex.Matches(completeString);
+
+            if (Matches.Count == 0)
+            {
+                throw new ArgumentException("A Valid Operation was not found");
+            }
+
+            return Matches[0].Value;
         }
     }
 }
