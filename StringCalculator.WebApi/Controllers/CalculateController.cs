@@ -17,7 +17,7 @@ namespace StringCalculator.WebApi.Controllers
         [HttpGet]
         public string Get()
         {
-            return "Include an expression in the body of your request such as \"4+5\"";
+            return "Include an expression in the body of your POST request such as \"4+5\"";
         }
 
         [HttpPost]
