@@ -1,6 +1,5 @@
 ﻿using Shouldly;
 using StringCalculator.Application.Operators;
-using System;
 using Xunit;
 
 namespace StringCalculator.UnitTesting.Application.Operators.Subtract
@@ -9,6 +8,7 @@ namespace StringCalculator.UnitTesting.Application.Operators.Subtract
     {
         [Theory]
         [InlineData("8-4", 4)]
+        [InlineData("4-8", -4)]
         [InlineData("24-12", 12)]
         [InlineData("512-256", 256)]
         public void ReturnSubtractedValues(string operationText, int expectedResult)
@@ -21,16 +21,6 @@ namespace StringCalculator.UnitTesting.Application.Operators.Subtract
 
             // Assert
             result.ShouldBe(expectedResult);
-        }
-
-        [Fact]
-        public void ThrowExceptionWhenResultNegative()
-        {
-            // Arrange
-            IOperator SystemUnderTest = new Subtraction("5-10");
-
-            // Act + Assert
-            Should.Throw<ArgumentOutOfRangeException>(() => SystemUnderTest.GetResult());
         }
     }
 }

@@ -17,7 +17,8 @@ namespace StringCalculator.Application.StringHelpers
         {
             do
             {
-                if (!calculationString.Contains(symbol))
+                // Break if Negative Result, with no other calculations
+                if (!calculationString.Substring(1).Contains(symbol))
                 {
                     break;
                 }

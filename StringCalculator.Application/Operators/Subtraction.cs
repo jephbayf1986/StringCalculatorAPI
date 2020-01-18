@@ -11,11 +11,6 @@ namespace StringCalculator.Application.Operators
 
         public override decimal GetResult()
         {
-            if (_valueB > _valueA)
-            {
-                throw new ArgumentOutOfRangeException("Cannot process negative results");
-            }
-
             return _valueA - _valueB;
         }
     }
