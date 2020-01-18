@@ -70,5 +70,24 @@ namespace StringCalculator.UnitTesting.Application.StringHelpers.StringModify
             _operationFactory.Verify(x => x.Create(It.IsAny<string>()), Times.Never());
             _operator.Verify(x => x.GetResult(), Times.Never());
         }
+
+        [Fact]
+        public void ReturnPositiveIfDoubleNegative()
+        {
+            // Arrange
+            string CalculationString = "--20";
+            string OperatorToCalculate = "-";
+
+            StringModifier SystemUnderTest = new StringModifier(_operationIdentifier.Object, _operationFactory.Object);
+
+            // Act
+            SystemUnderTest.SubstituteOperationsWithResult(ref CalculationString, OperatorToCalculate);
+
+            // Assert
+            CalculationString.ShouldBe("20");
+
+            _operationFactory.Verify(x => x.Create(It.IsAny<string>()), Times.Never());
+            _operator.Verify(x => x.GetResult(), Times.Never());
+        }
     }
 }

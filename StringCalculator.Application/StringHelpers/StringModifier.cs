@@ -1,4 +1,5 @@
-﻿using StringCalculator.Application.Operators;
+﻿using StringCalculator.Application.Constants;
+using StringCalculator.Application.Operators;
 
 namespace StringCalculator.Application.StringHelpers
 {
@@ -17,9 +18,22 @@ namespace StringCalculator.Application.StringHelpers
         {
             do
             {
-                // Break if Negative Result, with no other calculations
-                if (!calculationString.Substring(1).Contains(symbol))
+                if (!calculationString.Contains(symbol))
                 {
+                    break;
+                }
+
+                // Break if Negative Result, with no other calculations eg. -50
+                if (symbol == OperatorSymbol.Subtract && calculationString.Substring(0, 1) == symbol && !calculationString.Substring(1).Contains(symbol))
+                {
+                    break;
+                }
+
+                // Break if Double Negative Result, with no other calculations eg. --50
+                if (symbol == OperatorSymbol.Subtract && calculationString.Substring(0, 2) == (symbol + symbol) && !calculationString.Substring(2).Contains(symbol))
+                {
+                    calculationString = calculationString.Replace((symbol + symbol), "");
+
                     break;
                 }
 
