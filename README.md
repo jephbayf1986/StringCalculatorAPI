@@ -14,7 +14,7 @@
 ## Solution
 The method I used is as follows:
  * Regular Expressions used to identify smaller calculations within the overall string
- * In order of *(BO)DMAS* (DividE, then Multiply etc) identify each smaller calculation then replace that with it's result
+ * In order of *(BO)DMAS* (Divide, then Multiply etc) identify each smaller calculation then replace that with it's result
  * Continue until all operators have been removed, or only 1 or 2 negative signs remain at the start.
  * Considered throwing an error whenever a Subtraction results in a negative, however this was not specified.
 I implemented the following to ensure maintainable and production quality code:
