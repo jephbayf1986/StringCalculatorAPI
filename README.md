@@ -5,8 +5,6 @@
  * Developed in .Net CORE 3.1
  * The following Libraries were for Testing: XUnit, Moq, Shouldly
  
-## How to Use
- 
 ## Thought Process
  * The main problems I had to overcome:
    * Splitting a string up into potentially infinite calculations
