@@ -22,7 +22,7 @@ I implemented the following to ensure maintainable and production quality code:
  * Split up architecture into 3 projects: Core Logic, Presentation to User and Testing.
  * All operators to inherit from the same abstract **Operator** class
  * Abstract Factory Pattern to create Operator
- * Dependency Inversion by using Interfaces
+ * Dependency Inversion by using Interfaces, allowing for easier testing of single unit of work
  * Avoided use of lots of `IF ELSE` statements, making code difficult to read.
 
 # How to Build, Run and Test the Application
