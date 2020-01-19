@@ -17,6 +17,7 @@ The method I used is as follows:
  * In order of *(BO)DMAS* (Divide, then Multiply etc) identify each smaller calculation then replace that with it's result
  * Continue until all operators have been removed, or only 1 or 2 negative signs remain at the start.
  * Considered throwing an error whenever a Subtraction results in a negative, however this was not specified.
+
 I implemented the following to ensure maintainable and production quality code:
  * Split up architecture into 3 projects: Core Logic, Presentation to User and Testing.
  * All operators to inherit from the same abstract **Operator** class
