@@ -9,11 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{25169E57-A6A2-4D9B-956F-847DA0DCBC90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculator.Application", "..\StringCalculator.Application\StringCalculator.Application.csproj", "{15B543C0-1A07-486B-A915-BF67185B08E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculator.Application", "StringCalculator.Application\StringCalculator.Application.csproj", "{15B543C0-1A07-486B-A915-BF67185B08E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculator.WebApi", "..\StringCalculator.WebApi\StringCalculator.WebApi.csproj", "{8725B0FD-D2BC-46C5-BB56-B283A3A17732}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculator.WebApi", "StringCalculator.WebApi\StringCalculator.WebApi.csproj", "{8725B0FD-D2BC-46C5-BB56-B283A3A17732}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculator.UnitTesting", "..\StringCalculator.UnitTesting\StringCalculator.UnitTesting.csproj", "{52FB1A58-1B44-4955-9AAF-8EA94D205EDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculator.UnitTesting", "StringCalculator.UnitTesting\StringCalculator.UnitTesting.csproj", "{52FB1A58-1B44-4955-9AAF-8EA94D205EDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
